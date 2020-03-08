@@ -1,0 +1,27 @@
+{
+    "name": "gtcrais/laravel-ion",
+    "description": "Ion CMS for Laravel 7+",
+    "keywords": ["Ion", "Ion CMS", "Laravel Ion", "Laravel CMS"],
+    "homepage": "https://github.com/GTCrais/LaravelIon",
+    "authors": [
+        {
+            "name": "Tomislav Modrić",
+            "email": "modric.tomislav@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "GTCrais\\Ion\\": "src"
+        }
+    },
+    "require": {
+        "intervention/image": "^2.5"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "GTCrais\\Ion\\IonServiceProvider"
+            ]
+        }
+    }
+}

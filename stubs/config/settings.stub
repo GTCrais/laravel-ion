@@ -1,0 +1,21 @@
+<?php
+
+use GTCrais\Ion\Http\Middleware\EnforceAjax;
+use GTCrais\Ion\Http\Middleware\SetLocale;
+
+return [
+
+	'routePrefix' => 'admin',
+	'apiRoutePrefix' => 'api',
+	'defaultEntityUid' => 'user',
+
+	'ionAuthorizeMiddlewareClass' => GTCrais\Ion\Http\Middleware\AuthorizeUser::class,
+	'ionAuthorizeMiddlewareAlias' => 'ionAuthorize',
+	'apiRoutesMiddleware' => ['web', SetLocale::class, EnforceAjax::class],
+	'authorizedApiRoutesMiddleware' => 'ionAuthorize{authorizedApiRoles}',
+	'webRoutesMiddleware' => ['web', SetLocale::class],
+	'systemWebRoutesMiddleware' => 'ionAuthorize{systemWebRoles}',
+
+	'ionClassAlias' => 'Ion'
+
+];

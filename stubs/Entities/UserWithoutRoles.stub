@@ -1,0 +1,28 @@
+<?php
+
+namespace App\Ion\Entities;
+
+use {userNamespace} as UserModel;
+use GTCrais\Ion\Resources\Entity;
+
+class User extends UserModel
+{
+	use Entity;
+
+	public function getAdminEmailAttribute()
+	{
+		return $this->email ?: '--- No email entered ---';
+	}
+
+	public function getFullNameAttribute()
+	{
+		return $this->name . ' (' . $this->adminEmail . ')';
+	}
+
+	public function setPasswordAttribute($value)
+	{
+		if ($value) {
+			$this->attributes['password'] = \Hash::make($value);
+		}
+	}
+}

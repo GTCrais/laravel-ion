@@ -1,0 +1,18 @@
+
+        [
+            'property' => 'role',
+            'displayValue' => [
+                'type' => 'accessor',
+                'method' => 'roleName'
+            ],
+            'label' => 'Role',
+            'type' => 'select',
+            'select' => [
+                'type' => 'list',
+                'listMethod' => 'getUserRoles'
+            ],
+            'validationRules' => 'required',
+            'default' => 'user',
+            'quickSearch' => true,
+            'index' => true,
+        ],
