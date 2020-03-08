@@ -2,7 +2,8 @@
     "name": "gtcrais/laravel-ion",
     "description": "Ion CMS for Laravel 7+",
     "keywords": ["Ion", "Ion CMS", "Laravel Ion", "Laravel CMS"],
-    "homepage": "https://github.com/GTCrais/LaravelIon",
+    "homepage": "https://github.com/GTCrais/laravel-ion",
+    "license": "MIT",
     "authors": [
         {
             "name": "Tomislav Modrić",
