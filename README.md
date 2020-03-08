@@ -9,7 +9,7 @@ and many more options needed to quickly build a powerful, scalable CMS which the
 
 ## Installation
 
-- run `composer required gtcrais/laravel-ion:dev-master`
+- run `composer require gtcrais/laravel-ion dev-master`
 - run `php artisan ion:install` and follow the few quick installation steps
 
 ## Usage
